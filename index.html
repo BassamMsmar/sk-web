@@ -21,7 +21,7 @@
 
   <!-- Bootstrap RTL -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
-    integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+    crossorigin="anonymous">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
   <style>
@@ -29,14 +29,31 @@
        BRAND COLOR VARIABLES
     ============================ */
     :root {
-      --navy: #0b2136;
-      --navy-dark: #071629;
-      --gold: #d4af37;
-      --gold-light: #e8c84d;
+      /* Primary – Dark Green (from logo shield) */
+      --green: #16503c;
+      --green-deep: #0c2c20;
+      /* darkest shade – footer / deep backgrounds */
+      --green-mid: #1d6b4a;
+      /* mid-shade – gradients / hover accents */
+      --green-soft: #e8f4ee;
+      /* near-white green – section tint / highlight text */
+
+      /* Neutral */
       --white: #ffffff;
-      --light-bg: #f7f6f3;
-      --text-dark: #1a1a2e;
-      --text-muted: #6c757d;
+      --off-white: #f4faf7;
+      /* extremely subtle green-tinted off-white */
+
+      /* Text */
+      --text-on-green: #ffffff;
+      --text-on-white: #0c2c20;
+      --text-secondary: rgba(255, 255, 255, 0.72);
+      --text-muted: #4a7a62;
+
+      /* Utility */
+      --border-light: rgba(22, 80, 60, 0.12);
+      --border-on-green: rgba(255, 255, 255, 0.22);
+      --shadow-green: rgba(12, 44, 32, 0.18);
+      --shadow-soft: rgba(12, 44, 32, 0.08);
     }
 
     /* ============================
@@ -48,7 +65,7 @@
 
     body {
       font-family: 'Cairo', sans-serif;
-      color: var(--text-dark);
+      color: var(--text-on-white);
       background: var(--white);
       text-align: right;
       font-size: 1rem;
@@ -62,7 +79,7 @@
     h5,
     h6 {
       font-family: 'Cairo', sans-serif;
-      color: var(--navy);
+      color: var(--green);
       font-weight: 700;
     }
 
@@ -77,7 +94,7 @@
 
     .section-label {
       display: inline-block;
-      color: var(--gold);
+      color: var(--green-mid);
       font-weight: 700;
       font-size: 0.9rem;
       letter-spacing: 2px;
@@ -87,7 +104,7 @@
 
     .section-heading {
       font-size: 2rem;
-      color: var(--navy);
+      color: var(--green);
       font-weight: 800;
       margin-bottom: 16px;
     }
@@ -95,7 +112,7 @@
     .gold-underline {
       width: 60px;
       height: 4px;
-      background: var(--gold);
+      background: var(--green-mid);
       border-radius: 2px;
       margin: 0 auto 40px;
     }
@@ -113,8 +130,8 @@
       right: 0;
       left: 0;
       z-index: 1000;
-      background: var(--navy);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      background: var(--green);
+      box-shadow: 0 4px 24px var(--shadow-green);
       height: 72px;
       display: flex;
       align-items: center;
@@ -136,7 +153,7 @@
     }
 
     .logo-wrap span {
-      color: var(--white);
+      color: var(--text-on-green);
       font-size: 1.1rem;
       font-weight: 700;
       line-height: 1.3;
@@ -145,7 +162,7 @@
     .logo-wrap span em {
       display: block;
       font-style: normal;
-      color: var(--gold);
+      color: rgba(255, 255, 255, 0.65);
       font-size: 0.78rem;
       font-weight: 500;
     }
@@ -159,7 +176,7 @@
     }
 
     .site-nav a {
-      color: rgba(255, 255, 255, 0.85);
+      color: var(--text-secondary);
       font-weight: 600;
       font-size: 0.92rem;
       padding: 6px 14px;
@@ -169,13 +186,13 @@
 
     .site-nav a:hover,
     .site-nav a.active {
-      color: var(--gold);
-      background: rgba(212, 175, 55, 0.12);
+      color: var(--white);
+      background: var(--border-on-green);
     }
 
     .btn-contact {
-      background: var(--gold);
-      color: var(--navy);
+      background: var(--white);
+      color: var(--green);
       font-weight: 700;
       font-size: 0.9rem;
       padding: 9px 22px;
@@ -186,12 +203,12 @@
     }
 
     .btn-contact:hover {
-      background: var(--gold-light);
+      background: var(--green-soft);
       transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(212, 175, 55, 0.3);
+      box-shadow: 0 6px 18px var(--shadow-green);
+      color: var(--green);
     }
 
-    /* Mobile nav toggle */
     .nav-toggle {
       display: none;
       background: none;
@@ -217,7 +234,7 @@
        HERO SECTION
     ============================ */
     .hero-section {
-      background: linear-gradient(135deg, var(--navy) 0%, #1e3d5c 50%, var(--navy-dark) 100%);
+      background: linear-gradient(140deg, var(--green-deep) 0%, var(--green) 55%, var(--green-mid) 100%);
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -229,11 +246,11 @@
     .hero-section::before {
       content: '';
       position: absolute;
-      top: -50%;
-      right: -20%;
+      top: -40%;
+      right: -15%;
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, transparent 70%);
       border-radius: 50%;
     }
 
@@ -244,7 +261,7 @@
       left: -10%;
       width: 400px;
       height: 400px;
-      background: radial-gradient(circle, rgba(212, 175, 55, 0.06) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.04) 0%, transparent 70%);
       border-radius: 50%;
     }
 
@@ -252,9 +269,9 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(212, 175, 55, 0.15);
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      color: var(--gold);
+      background: var(--border-on-green);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: var(--white);
       padding: 6px 18px;
       border-radius: 40px;
       font-size: 0.85rem;
@@ -271,11 +288,11 @@
     }
 
     .hero-title span {
-      color: var(--gold);
+      color: var(--green-soft);
     }
 
     .hero-text {
-      color: rgba(255, 255, 255, 0.75);
+      color: var(--text-secondary);
       font-size: 1.1rem;
       line-height: 1.9;
       margin-bottom: 36px;
@@ -288,8 +305,8 @@
     }
 
     .btn-primary-gold {
-      background: var(--gold);
-      color: var(--navy);
+      background: var(--white);
+      color: var(--green);
       font-weight: 700;
       padding: 13px 30px;
       border-radius: 10px;
@@ -298,10 +315,10 @@
     }
 
     .btn-primary-gold:hover {
-      background: var(--gold-light);
+      background: var(--green-soft);
       transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
-      color: var(--navy);
+      box-shadow: 0 10px 25px var(--shadow-green);
+      color: var(--green);
     }
 
     .btn-outline-white {
@@ -310,13 +327,13 @@
       font-weight: 600;
       padding: 13px 30px;
       border-radius: 10px;
-      border: 2px solid rgba(255, 255, 255, 0.4);
+      border: 2px solid var(--border-on-green);
       transition: all 0.3s;
     }
 
     .btn-outline-white:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: var(--white);
+      background: var(--border-on-green);
+      border-color: rgba(255, 255, 255, 0.5);
       transform: translateY(-3px);
       color: var(--white);
     }
@@ -335,11 +352,11 @@
     .stat-number {
       font-size: 2rem;
       font-weight: 800;
-      color: var(--gold);
+      color: var(--green-soft);
     }
 
     .stat-label {
-      color: rgba(255, 255, 255, 0.65);
+      color: var(--text-secondary);
       font-size: 0.82rem;
     }
 
@@ -348,8 +365,8 @@
     }
 
     .hero-logo-card {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(212, 175, 55, 0.25);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border-on-green);
       border-radius: 20px;
       padding: 40px;
       text-align: center;
@@ -360,7 +377,7 @@
       width: 100%;
       max-width: 320px;
       border-radius: 16px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 20px 50px var(--shadow-green);
     }
 
     /* ============================
@@ -375,7 +392,7 @@
       border-radius: 16px;
       padding: 36px;
       height: 100%;
-      border: 1px solid #eee;
+      border: 1px solid var(--border-light);
       transition: all 0.35s ease;
       position: relative;
       overflow: hidden;
@@ -388,20 +405,20 @@
       right: 0;
       width: 100%;
       height: 4px;
-      background: linear-gradient(90deg, var(--gold), var(--navy));
+      background: linear-gradient(90deg, var(--green-mid), var(--green));
     }
 
     .about-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 20px 50px rgba(11, 33, 54, 0.1);
-      border-color: rgba(212, 175, 55, 0.3);
+      box-shadow: 0 20px 50px var(--shadow-soft);
+      border-color: rgba(22, 80, 60, 0.25);
     }
 
     .about-icon {
       width: 64px;
       height: 64px;
       border-radius: 14px;
-      background: linear-gradient(135deg, var(--navy), #1e3d5c);
+      background: linear-gradient(135deg, var(--green), var(--green-mid));
       display: flex;
       align-items: center;
       justify-content: center;
@@ -410,14 +427,14 @@
 
     .about-icon i {
       font-size: 28px;
-      color: var(--gold);
+      color: var(--white);
     }
 
     /* ============================
        SERVICES SECTION
     ============================ */
     .services-section {
-      background: var(--light-bg);
+      background: var(--off-white);
     }
 
     .service-card {
@@ -425,17 +442,17 @@
       border-radius: 16px;
       overflow: hidden;
       transition: all 0.4s ease;
-      border: 1px solid #ebebeb;
+      border: 1px solid var(--border-light);
     }
 
     .service-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 20px 45px rgba(11, 33, 54, 0.12);
+      box-shadow: 0 20px 45px var(--shadow-soft);
     }
 
     .service-icon-wrap {
       height: 180px;
-      background: linear-gradient(135deg, var(--navy) 0%, #1a3a5c 100%);
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -456,7 +473,7 @@
 
     .service-icon-wrap i {
       font-size: 72px;
-      color: var(--gold);
+      color: var(--white);
       transition: transform 0.4s ease;
     }
 
@@ -472,7 +489,7 @@
     .service-body h4 {
       font-size: 1.2rem;
       margin-bottom: 10px;
-      color: var(--navy);
+      color: var(--green);
     }
 
     .service-body p {
@@ -493,14 +510,14 @@
       border-radius: 16px;
       padding: 36px 24px;
       text-align: center;
-      border: 1px solid #ebebeb;
+      border: 1px solid var(--border-light);
       transition: all 0.4s ease;
     }
 
     .fleet-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 18px 40px rgba(11, 33, 54, 0.1);
-      border-color: var(--gold);
+      box-shadow: 0 18px 40px var(--shadow-soft);
+      border-color: var(--green-mid);
     }
 
     .fleet-icon-circle {
@@ -509,16 +526,16 @@
       border-radius: 50%;
       display: flex;
       align-items: center;
-      justify-content-center;
+      justify-content: center;
       margin: 0 auto 20px;
     }
 
     .fleet-icon-circle.navy {
-      background: var(--navy);
+      background: var(--green);
     }
 
     .fleet-icon-circle.gold {
-      background: var(--gold);
+      background: var(--green-soft);
     }
 
     .fleet-icon-circle i {
@@ -526,18 +543,18 @@
     }
 
     .fleet-icon-circle.navy i {
-      color: var(--gold);
+      color: var(--white);
     }
 
     .fleet-icon-circle.gold i {
-      color: var(--navy);
+      color: var(--green);
     }
 
     /* ============================
        FAQ SECTION
     ============================ */
     .faq-section {
-      background: var(--light-bg);
+      background: var(--off-white);
     }
 
     .accordion-item {
@@ -545,20 +562,20 @@
       border-radius: 12px !important;
       margin-bottom: 12px;
       overflow: hidden;
-      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 3px 15px var(--shadow-soft);
     }
 
     .accordion-button {
       background: var(--white) !important;
-      color: var(--navy) !important;
+      color: var(--green) !important;
       font-weight: 700 !important;
       font-size: 1rem !important;
       padding: 20px 24px !important;
-      border-left: 4px solid var(--gold);
+      border-left: 4px solid var(--green-mid);
     }
 
     .accordion-button:not(.collapsed) {
-      background: var(--navy) !important;
+      background: var(--green) !important;
       color: var(--white) !important;
       box-shadow: none !important;
     }
@@ -573,17 +590,17 @@
 
     .accordion-body {
       background: var(--white) !important;
-      color: #444;
+      color: var(--text-on-white);
       line-height: 1.9;
       padding: 20px 24px !important;
-      border-right: 4px solid rgba(212, 175, 55, 0.3);
+      border-right: 4px solid var(--green-soft);
     }
 
     /* ============================
        FOOTER
     ============================ */
     .site-footer {
-      background: var(--navy-dark);
+      background: var(--green-deep);
       padding: 70px 0 0;
     }
 
@@ -619,7 +636,7 @@
       font-weight: 700;
       margin-bottom: 20px;
       padding-bottom: 12px;
-      border-bottom: 2px solid var(--gold);
+      border-bottom: 2px solid var(--green-mid);
       display: inline-block;
     }
 
@@ -635,12 +652,12 @@
       height: 42px;
       min-width: 42px;
       border-radius: 10px;
-      background: rgba(212, 175, 55, 0.15);
-      border: 1px solid rgba(212, 175, 55, 0.3);
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid var(--border-on-green);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--gold);
+      color: var(--white);
       font-size: 18px;
     }
 
@@ -651,7 +668,7 @@
     }
 
     .contact-row a:hover {
-      color: var(--gold);
+      color: var(--green-soft);
     }
 
     .footer-divider {
@@ -708,7 +725,7 @@
       bottom: 92px;
       width: 42px;
       height: 42px;
-      background: var(--navy);
+      background: var(--green);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -719,7 +736,7 @@
       opacity: 0;
       z-index: 9998;
       transition: all 0.3s;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 12px var(--shadow-green);
     }
 
     .scroll-top.active {
@@ -727,8 +744,8 @@
     }
 
     .scroll-top:hover {
-      background: var(--gold);
-      color: var(--navy);
+      background: var(--green-mid);
+      color: var(--white);
     }
   </style>
 </head>
@@ -792,7 +809,7 @@
 
           <div class="hero-stats">
             <div class="stat-item">
-              <div class="stat-number">+500</div>
+              <div class="stat-number">+5000</div>
               <div class="stat-label">رحلة منجزة</div>
             </div>
             <div class="stat-item">
@@ -941,7 +958,7 @@
           <div class="fleet-card">
             <div class="fleet-icon-circle navy d-flex align-items-center justify-content-center mx-auto mb-4"
               style="width:90px;height:90px;border-radius:50%;">
-              <i class="bi bi-truck" style="font-size:38px; color: var(--gold);"></i>
+              <i class="bi bi-truck" style="font-size:38px; color: var(--white);"></i>
             </div>
             <h4 style="text-align:center;">شاحنات دينا</h4>
             <p style="color: var(--text-muted); text-align:center;">مثالية للحمولات المتوسطة والتوزيع السريع داخل المدن
@@ -951,8 +968,8 @@
         <div class="col-xl-4 col-md-6">
           <div class="fleet-card">
             <div class="d-flex align-items-center justify-content-center mx-auto mb-4"
-              style="width:90px;height:90px;border-radius:50%;background:var(--gold);">
-              <i class="bi bi-truck-flatbed" style="font-size:38px; color: var(--navy);"></i>
+              style="width:90px;height:90px;border-radius:50%;background:var(--green-soft);">
+              <i class="bi bi-truck-flatbed" style="font-size:38px; color: var(--green);"></i>
             </div>
             <h4 style="text-align:center;">شاحنات سطحة</h4>
             <p style="color: var(--text-muted); text-align:center;">مخصصة لنقل المعدات الثقيلة والسيارات وتوفير الدعم
@@ -962,8 +979,8 @@
         <div class="col-xl-4 col-md-6">
           <div class="fleet-card">
             <div class="d-flex align-items-center justify-content-center mx-auto mb-4"
-              style="width:90px;height:90px;border-radius:50%;background:var(--navy);">
-              <i class="bi bi-car-front-fill" style="font-size:38px; color: var(--gold);"></i>
+              style="width:90px;height:90px;border-radius:50%;background:var(--green);">
+              <i class="bi bi-truck-front-fill" style="font-size:38px; color: var(--white);"></i>
             </div>
             <h4 style="text-align:center;">تريلات ومقطورات</h4>
             <p style="color: var(--text-muted); text-align:center;">مصممة لنقل البضائع ذات الحمولات الكبيرة والمسافات
@@ -994,14 +1011,14 @@
               <h2 class="accordion-header" id="h1">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c1"
                   aria-expanded="false">
-                  كيف يمكنني الانضمام إلى شبكة ناقلي مؤسسة سنارة الخليج؟
+                  ما هو نطاق التغطية الجغرافية لخدماتكم؟
                 </button>
               </h2>
               <div id="c1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  يمكنك الانضمام بسهولة عن طريق التواصل معنا عبر أرقام خدمة العملاء أو البريد الإلكتروني. سيقوم فريقنا
-                  بتزويدك بمتطلبات التسجيل والتي تشمل الهوية الوطنية، رخصة القيادة، استمارة المركبة، وتأمين سارٍ
-                  المفعول.
+                  نغطي جميع مدن ومناطق المملكة العربية السعودية، بما فيها جدة، الرياض، الدمام، المدينة المنورة، القصيم،
+                  وأبها،
+                  مع إمكانية جدولة رحلات منتظمة أو حسب الطلب.
                 </div>
               </div>
             </div>
@@ -1009,13 +1026,13 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="h2">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c2">
-                  متى يتم استلام مستحقات النقل للمشاوير المنجزة؟
+                  ما أنواع الشاحنات التي توفرونها؟
                 </button>
               </h2>
               <div id="c2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  نحرص على حصول ناقلينا على مستحقاتهم بأسرع وقت. يتم تسوية المستحقات المالية وتحويلها إلى حسابك البنكي
-                  خلال مدة تتراوح من 24 إلى 48 ساعة بعد تأكيد العميل لاستلام الحمولة وإقفال الطلب النظامي.
+                  نوفر جميع أنواع الشاحنات حسب طبيعة الشحنة: مبردة، جافة (ستارة / صندوق)، دينا، شاحنات صغيرة ومتوسطة،
+                  وتريلات كبيرة. يتم اختيار المركبة المناسبة بناءً على نوع البضاعة وحجمها.
                 </div>
               </div>
             </div>
@@ -1023,13 +1040,14 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="h3">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c3">
-                  ما هي أنواع الشاحنات المطلوبة للعمل معكم؟
+                  هل يوجد تأمين على الشحنات؟
                 </button>
               </h2>
               <div id="c3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  نتعاون مع مختلف أنواع الشاحنات: سيارات النقل الخفيف (دينا)، شاحنات السطحة، التريلات بأنواعها (جوانب،
-                  ستارة، صندوق)، بالإضافة إلى الشاحنات المبردة والمجمدة.
+                  نعم، نوفر تأميناً على الشحنات حسب طلب العميل ونوع البضاعة، لضمان حماية البضائع أثناء النقل. يُفعَّل
+                  التأمين
+                  عند التعاقد مع توضيح كامل لتفاصيل التغطية.
                 </div>
               </div>
             </div>
@@ -1037,13 +1055,13 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="h4">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c4">
-                  كيف يتم تحديد تسعيرة المشوار للناقل؟
+                  كيف يمكنني طلب شاحنة أو متابعة الشحنة؟
                 </button>
               </h2>
               <div id="c4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  تعتمد تسعيرة المشاوير على عدة عوامل شفافة: المسافة المقطوعة، نوع الحمولة، نوع الشاحنة المطلوبة، وظروف
-                  السوق. نحرص دائماً على توفير تسعيرة عادلة ومجزية قبل تأكيد الرحلة.
+                  يمكن طلب الخدمة أو متابعة الشحنة عبر الاتصال المباشر، الموقع الإلكتروني، أو البريد الإلكتروني.
+                  كما نوفر نظام تتبع يُمكّن العميل من معرفة حالة الشحنة حتى وصولها.
                 </div>
               </div>
             </div>
@@ -1051,13 +1069,14 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="h5">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c5">
-                  ماذا أفعل في حال واجهت مشكلة أثناء أداء الرحلة؟
+                  ما أنواع البضائع التي يمكنكم نقلها؟
                 </button>
               </h2>
               <div id="c5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  فريق الدعم اللوجستي لدينا متواجد على مدار الساعة. في حال حدوث عطل طارئ أو تأخير في التحميل/التنزيل،
-                  يرجى التواصل فوراً مع مسؤول الحركة لمتابعة الحالة وتقديم الدعم.
+                  نتعامل مع مختلف أنواع البضائع: المواد الغذائية (مبردة وجافة)، المنتجات التجارية، المعدات، والبضائع
+                  الصناعية.
+                  يتم اختيار وسيلة النقل المناسبة حسب طبيعة الحمولة ومتطلبات التخزين.
                 </div>
               </div>
             </div>
@@ -1112,7 +1131,7 @@
             <div class="contact-icon-wrap">
               <i class="bi bi-whatsapp"></i>
             </div>
-            <a href="https://wa.me/966508750008" target="_blank">تواصل عبر واتساب</a>
+            <a href="https://wa.me/966502274884" target="_blank">تواصل عبر واتساب</a>
           </div>
         </div>
 
@@ -1128,7 +1147,7 @@
   </footer>
 
   <!-- WhatsApp Float -->
-  <a href="https://wa.me/966508750008" class="whatsapp-float" target="_blank">
+  <a href="https://wa.me/966502274884" class="whatsapp-float" target="_blank">
     <i class="bi bi-whatsapp"></i>
   </a>
 
@@ -1139,7 +1158,7 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmFUfJ6o0/m2/04G/6jh2LlCkYn" crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 
   <script>
     // Smooth active nav
