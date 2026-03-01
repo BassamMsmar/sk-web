@@ -1,1185 +1,1782 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>مؤسسة سنارة الخليج للنقليات</title>
+    <meta
+      name="description"
+      content="مؤسسة وطنية متخصصة في خدمات النقل البري والخدمات اللوجستية داخل المملكة العربية السعودية"
+    />
+    <meta
+      name="keywords"
+      content="نقل بري, خدمات لوجستية, السعودية, شاحنات, دينا, سطحة, نقل مبرد, سنارة الخليج"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>مؤسسة سنارة الخليج للنقليات</title>
-  <meta name="description"
-    content="مؤسسة وطنية متخصصة في خدمات النقل البري والخدمات اللوجستية داخل المملكة العربية السعودية">
-  <meta name="keywords" content="نقل بري, خدمات لوجستية, السعودية, شاحنات, دينا, سطحة, نقل مبرد, سنارة الخليج">
+    <!-- Favicons -->
+    <link href="assets/img/logo.jpeg" rel="icon" />
+    <link href="assets/img/logo.jpeg" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/logo.jpeg" rel="icon">
-  <link href="assets/img/logo.jpeg" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+    <!-- Bootstrap RTL -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap RTL -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
-    crossorigin="anonymous">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-
-  <style>
-    /* ============================
+    <style>
+      /* ============================
        BRAND COLOR VARIABLES
     ============================ */
-    :root {
-      /* Primary – Dark Green (from logo shield) */
-      --green: #16503c;
-      --green-deep: #0c2c20;
-      /* darkest shade – footer / deep backgrounds */
-      --green-mid: #1d6b4a;
-      /* mid-shade – gradients / hover accents */
-      --green-soft: #e8f4ee;
-      /* near-white green – section tint / highlight text */
+      :root {
+        /* Primary – Dark Green (from logo shield) */
+        --green: #16503c;
+        --green-deep: #0c2c20;
+        /* darkest shade – footer / deep backgrounds */
+        --green-mid: #1d6b4a;
+        /* mid-shade – gradients / hover accents */
+        --green-soft: #e8f4ee;
+        /* near-white green – section tint / highlight text */
 
-      /* Neutral */
-      --white: #ffffff;
-      --off-white: #f4faf7;
-      /* extremely subtle green-tinted off-white */
+        /* Neutral */
+        --white: #ffffff;
+        --off-white: #f4faf7;
+        /* extremely subtle green-tinted off-white */
 
-      /* Text */
-      --text-on-green: #ffffff;
-      --text-on-white: #0c2c20;
-      --text-secondary: rgba(255, 255, 255, 0.72);
-      --text-muted: #4a7a62;
+        /* Text */
+        --text-on-green: #ffffff;
+        --text-on-white: #0c2c20;
+        --text-secondary: rgba(255, 255, 255, 0.72);
+        --text-muted: #4a7a62;
 
-      /* Utility */
-      --border-light: rgba(22, 80, 60, 0.12);
-      --border-on-green: rgba(255, 255, 255, 0.22);
-      --shadow-green: rgba(12, 44, 32, 0.18);
-      --shadow-soft: rgba(12, 44, 32, 0.08);
-    }
+        /* Utility */
+        --border-light: rgba(22, 80, 60, 0.12);
+        --border-on-green: rgba(255, 255, 255, 0.22);
+        --shadow-green: rgba(12, 44, 32, 0.18);
+        --shadow-soft: rgba(12, 44, 32, 0.08);
+      }
 
-    /* ============================
+      /* ============================
        BASE
     ============================ */
-    * {
-      box-sizing: border-box;
-    }
+      * {
+        box-sizing: border-box;
+      }
 
-    body {
-      font-family: 'Cairo', sans-serif;
-      color: var(--text-on-white);
-      background: var(--white);
-      text-align: right;
-      font-size: 1rem;
-      line-height: 1.7;
-    }
+      body {
+        font-family: "Cairo", sans-serif;
+        color: var(--text-on-white);
+        background: var(--white);
+        text-align: right;
+        font-size: 1rem;
+        line-height: 1.7;
+      }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: 'Cairo', sans-serif;
-      color: var(--green);
-      font-weight: 700;
-    }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Cairo", sans-serif;
+        color: var(--green);
+        font-weight: 700;
+      }
 
-    a {
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
+      a {
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
 
-    section {
-      padding: 80px 0;
-    }
+      section {
+        padding: 80px 0;
+      }
 
-    .section-label {
-      display: inline-block;
-      color: var(--green-mid);
-      font-weight: 700;
-      font-size: 0.9rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
+      .section-label {
+        display: inline-block;
+        color: var(--green-mid);
+        font-weight: 700;
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
 
-    .section-heading {
-      font-size: 2rem;
-      color: var(--green);
-      font-weight: 800;
-      margin-bottom: 16px;
-    }
+      .section-heading {
+        font-size: 2rem;
+        color: var(--green);
+        font-weight: 800;
+        margin-bottom: 16px;
+      }
 
-    .gold-underline {
-      width: 60px;
-      height: 4px;
-      background: var(--green-mid);
-      border-radius: 2px;
-      margin: 0 auto 40px;
-    }
+      .gold-underline {
+        width: 60px;
+        height: 4px;
+        background: var(--green-mid);
+        border-radius: 2px;
+        margin: 0 auto 40px;
+      }
 
-    .gold-underline.start {
-      margin: 0 0 30px;
-    }
+      .gold-underline.start {
+        margin: 0 0 30px;
+      }
 
-    /* ============================
+      /* ============================
        HEADER / NAVBAR
     ============================ */
-    .site-header {
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      z-index: 1000;
-      background: var(--green);
-      box-shadow: 0 4px 24px var(--shadow-green);
-      height: 72px;
-      display: flex;
-      align-items: center;
-    }
+      .site-header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+        background: var(--green);
+        box-shadow: 0 4px 24px var(--shadow-green);
+        height: 72px;
+        display: flex;
+        align-items: center;
+      }
 
-    .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
+      .logo-wrap {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+      }
 
-    .logo-wrap img {
-      height: 46px;
-      border-radius: 8px;
-      background: white;
-      padding: 3px;
-      object-fit: contain;
-    }
+      .logo-wrap img {
+        height: 46px;
+        border-radius: 8px;
+        background: white;
+        padding: 3px;
+        object-fit: contain;
+      }
 
-    .logo-wrap span {
-      color: var(--text-on-green);
-      font-size: 1.1rem;
-      font-weight: 700;
-      line-height: 1.3;
-    }
+      .logo-wrap span {
+        color: var(--text-on-green);
+        font-size: 1.1rem;
+        font-weight: 700;
+        line-height: 1.3;
+      }
 
-    .logo-wrap span em {
-      display: block;
-      font-style: normal;
-      color: rgba(255, 255, 255, 0.65);
-      font-size: 0.78rem;
-      font-weight: 500;
-    }
+      .logo-wrap span em {
+        display: block;
+        font-style: normal;
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 0.78rem;
+        font-weight: 500;
+      }
 
-    .site-nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 4px;
-    }
+      .site-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 4px;
+      }
 
-    .site-nav a {
-      color: var(--text-secondary);
-      font-weight: 600;
-      font-size: 0.92rem;
-      padding: 6px 14px;
-      border-radius: 6px;
-      transition: all 0.25s;
-    }
+      .site-nav a {
+        color: var(--text-secondary);
+        font-weight: 600;
+        font-size: 0.92rem;
+        padding: 6px 14px;
+        border-radius: 6px;
+        transition: all 0.25s;
+      }
 
-    .site-nav a:hover,
-    .site-nav a.active {
-      color: var(--white);
-      background: var(--border-on-green);
-    }
+      .site-nav a:hover,
+      .site-nav a.active {
+        color: var(--white);
+        background: var(--border-on-green);
+      }
 
-    .btn-contact {
-      background: var(--white);
-      color: var(--green);
-      font-weight: 700;
-      font-size: 0.9rem;
-      padding: 9px 22px;
-      border-radius: 8px;
-      border: none;
-      transition: all 0.3s;
-      white-space: nowrap;
-    }
-
-    .btn-contact:hover {
-      background: var(--green-soft);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px var(--shadow-green);
-      color: var(--green);
-    }
-
-    .nav-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: white;
-      font-size: 26px;
-      cursor: pointer;
-    }
-
-    @media (max-width: 991px) {
-
-      .site-nav,
       .btn-contact {
-        display: none !important;
+        background: var(--white);
+        color: var(--green);
+        font-weight: 700;
+        font-size: 0.9rem;
+        padding: 9px 22px;
+        border-radius: 8px;
+        border: none;
+        transition: all 0.3s;
+        white-space: nowrap;
+      }
+
+      .btn-contact:hover {
+        background: var(--green-soft);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px var(--shadow-green);
+        color: var(--green);
       }
 
       .nav-toggle {
-        display: block;
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 26px;
+        cursor: pointer;
       }
-    }
 
-    /* ============================
+      @media (max-width: 991px) {
+        .site-nav,
+        .btn-contact {
+          display: none !important;
+        }
+
+        .nav-toggle {
+          display: block;
+        }
+      }
+
+      /* ============================
        HERO SECTION
     ============================ */
-    .hero-section {
-      background: linear-gradient(140deg, var(--green-deep) 0%, var(--green) 55%, var(--green-mid) 100%);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding-top: 72px;
-      position: relative;
-      overflow: hidden;
-    }
+      .hero-section {
+        background: linear-gradient(
+          140deg,
+          var(--green-deep) 0%,
+          var(--green) 55%,
+          var(--green-mid) 100%
+        );
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding-top: 72px;
+        position: relative;
+        overflow: hidden;
+      }
 
-    .hero-section::before {
-      content: '';
-      position: absolute;
-      top: -40%;
-      right: -15%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, transparent 70%);
-      border-radius: 50%;
-    }
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: -40%;
+        right: -15%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.06) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+      }
 
-    .hero-section::after {
-      content: '';
-      position: absolute;
-      bottom: -30%;
-      left: -10%;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.04) 0%, transparent 70%);
-      border-radius: 50%;
-    }
+      .hero-section::after {
+        content: "";
+        position: absolute;
+        bottom: -30%;
+        left: -10%;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.04) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+      }
 
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--border-on-green);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      color: var(--white);
-      padding: 6px 18px;
-      border-radius: 40px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 24px;
-    }
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--border-on-green);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: var(--white);
+        padding: 6px 18px;
+        border-radius: 40px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-bottom: 24px;
+      }
 
-    .hero-title {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 800;
-      color: var(--white);
-      line-height: 1.3;
-      margin-bottom: 20px;
-    }
+      .hero-title {
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 800;
+        color: var(--white);
+        line-height: 1.3;
+        margin-bottom: 20px;
+      }
 
-    .hero-title span {
-      color: var(--green-soft);
-    }
+      .hero-title span {
+        color: var(--green-soft);
+      }
 
-    .hero-text {
-      color: var(--text-secondary);
-      font-size: 1.1rem;
-      line-height: 1.9;
-      margin-bottom: 36px;
-    }
+      .hero-text {
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+        line-height: 1.9;
+        margin-bottom: 36px;
+      }
 
-    .hero-btns {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
+      .hero-btns {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
 
-    .btn-primary-gold {
-      background: var(--white);
-      color: var(--green);
-      font-weight: 700;
-      padding: 13px 30px;
-      border-radius: 10px;
-      border: none;
-      transition: all 0.3s;
-    }
+      .btn-primary-gold {
+        background: var(--white);
+        color: var(--green);
+        font-weight: 700;
+        padding: 13px 30px;
+        border-radius: 10px;
+        border: none;
+        transition: all 0.3s;
+      }
 
-    .btn-primary-gold:hover {
-      background: var(--green-soft);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px var(--shadow-green);
-      color: var(--green);
-    }
+      .btn-primary-gold:hover {
+        background: var(--green-soft);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px var(--shadow-green);
+        color: var(--green);
+      }
 
-    .btn-outline-white {
-      background: transparent;
-      color: var(--white);
-      font-weight: 600;
-      padding: 13px 30px;
-      border-radius: 10px;
-      border: 2px solid var(--border-on-green);
-      transition: all 0.3s;
-    }
+      .btn-outline-white {
+        background: transparent;
+        color: var(--white);
+        font-weight: 600;
+        padding: 13px 30px;
+        border-radius: 10px;
+        border: 2px solid var(--border-on-green);
+        transition: all 0.3s;
+      }
 
-    .btn-outline-white:hover {
-      background: var(--border-on-green);
-      border-color: rgba(255, 255, 255, 0.5);
-      transform: translateY(-3px);
-      color: var(--white);
-    }
+      .btn-outline-white:hover {
+        background: var(--border-on-green);
+        border-color: rgba(255, 255, 255, 0.5);
+        transform: translateY(-3px);
+        color: var(--white);
+      }
 
-    .hero-stats {
-      display: flex;
-      gap: 32px;
-      margin-top: 48px;
-      flex-wrap: wrap;
-    }
+      .hero-stats {
+        display: flex;
+        gap: 32px;
+        margin-top: 48px;
+        flex-wrap: wrap;
+      }
 
-    .stat-item {
-      text-align: center;
-    }
+      .stat-item {
+        text-align: center;
+      }
 
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--green-soft);
-    }
+      .stat-number {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--green-soft);
+      }
 
-    .stat-label {
-      color: var(--text-secondary);
-      font-size: 0.82rem;
-    }
+      .stat-label {
+        color: var(--text-secondary);
+        font-size: 0.82rem;
+      }
 
-    .hero-image-wrap {
-      position: relative;
-    }
+      .hero-image-wrap {
+        position: relative;
+      }
 
-    .hero-logo-card {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid var(--border-on-green);
-      border-radius: 20px;
-      padding: 40px;
-      text-align: center;
-      backdrop-filter: blur(10px);
-    }
+      .hero-logo-card {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid var(--border-on-green);
+        border-radius: 20px;
+        padding: 40px;
+        text-align: center;
+        backdrop-filter: blur(10px);
+      }
 
-    .hero-logo-card img {
-      width: 100%;
-      max-width: 320px;
-      border-radius: 16px;
-      box-shadow: 0 20px 50px var(--shadow-green);
-    }
+      .hero-logo-card img {
+        width: 100%;
+        max-width: 320px;
+        border-radius: 16px;
+        box-shadow: 0 20px 50px var(--shadow-green);
+      }
 
-    /* ============================
+      /* ============================
        ABOUT SECTION
     ============================ */
-    .about-section {
-      background: var(--white);
-    }
+      .about-section {
+        background: var(--white);
+      }
 
-    .about-card {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 36px;
-      height: 100%;
-      border: 1px solid var(--border-light);
-      transition: all 0.35s ease;
-      position: relative;
-      overflow: hidden;
-    }
+      .about-card {
+        background: var(--white);
+        border-radius: 16px;
+        padding: 36px;
+        height: 100%;
+        border: 1px solid var(--border-light);
+        transition: all 0.35s ease;
+        position: relative;
+        overflow: hidden;
+      }
 
-    .about-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(90deg, var(--green-mid), var(--green));
-    }
+      .about-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--green-mid), var(--green));
+      }
 
-    .about-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 50px var(--shadow-soft);
-      border-color: rgba(22, 80, 60, 0.25);
-    }
+      .about-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 50px var(--shadow-soft);
+        border-color: rgba(22, 80, 60, 0.25);
+      }
 
-    .about-icon {
-      width: 64px;
-      height: 64px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--green), var(--green-mid));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
+      .about-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, var(--green), var(--green-mid));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
 
-    .about-icon i {
-      font-size: 28px;
-      color: var(--white);
-    }
+      .about-icon i {
+        font-size: 28px;
+        color: var(--white);
+      }
 
-    /* ============================
+      /* ============================
        SERVICES SECTION
     ============================ */
-    .services-section {
-      background: var(--off-white);
-    }
+      .services-section {
+        background: var(--off-white);
+      }
 
-    .service-card {
-      background: var(--white);
-      border-radius: 16px;
-      overflow: hidden;
-      transition: all 0.4s ease;
-      border: 1px solid var(--border-light);
-    }
+      .service-card {
+        background: var(--white);
+        border-radius: 16px;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        border: 1px solid var(--border-light);
+      }
 
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 45px var(--shadow-soft);
-    }
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 45px var(--shadow-soft);
+      }
 
-    .service-icon-wrap {
-      height: 180px;
-      background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
+      .service-icon-wrap {
+        height: 180px;
+        background: linear-gradient(
+          135deg,
+          var(--green) 0%,
+          var(--green-mid) 100%
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
 
-    .service-icon-wrap::after {
-      content: '';
-      position: absolute;
-      bottom: -1px;
-      left: 0;
-      right: 0;
-      height: 30px;
-      background: var(--white);
-      clip-path: ellipse(55% 100% at 50% 100%);
-    }
+      .service-icon-wrap::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        height: 30px;
+        background: var(--white);
+        clip-path: ellipse(55% 100% at 50% 100%);
+      }
 
-    .service-icon-wrap i {
-      font-size: 72px;
-      color: var(--white);
-      transition: transform 0.4s ease;
-    }
+      .service-icon-wrap i {
+        font-size: 72px;
+        color: var(--white);
+        transition: transform 0.4s ease;
+      }
 
-    .service-card:hover .service-icon-wrap i {
-      transform: scale(1.1) rotate(5deg);
-    }
+      .service-card:hover .service-icon-wrap i {
+        transform: scale(1.1) rotate(5deg);
+      }
 
-    .service-body {
-      padding: 28px 24px 24px;
-      text-align: center;
-    }
+      .service-body {
+        padding: 28px 24px 24px;
+        text-align: center;
+      }
 
-    .service-body h4 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      color: var(--green);
-    }
+      .service-body h4 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: var(--green);
+      }
 
-    .service-body p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin: 0;
-    }
+      .service-body p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        margin: 0;
+      }
 
-    /* ============================
+      /* ============================
        FLEET SECTION
     ============================ */
-    .fleet-section {
-      background: var(--white);
-    }
+      .fleet-section {
+        background: var(--white);
+      }
 
-    .fleet-card {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 36px 24px;
-      text-align: center;
-      border: 1px solid var(--border-light);
-      transition: all 0.4s ease;
-    }
+      .fleet-card {
+        background: var(--white);
+        border-radius: 16px;
+        padding: 36px 24px;
+        text-align: center;
+        border: 1px solid var(--border-light);
+        transition: all 0.4s ease;
+      }
 
-    .fleet-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 18px 40px var(--shadow-soft);
-      border-color: var(--green-mid);
-    }
+      .fleet-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 18px 40px var(--shadow-soft);
+        border-color: var(--green-mid);
+      }
 
-    .fleet-icon-circle {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-    }
+      .fleet-icon-circle {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+      }
 
-    .fleet-icon-circle.navy {
-      background: var(--green);
-    }
+      .fleet-icon-circle.navy {
+        background: var(--green);
+      }
 
-    .fleet-icon-circle.gold {
-      background: var(--green-soft);
-    }
+      .fleet-icon-circle.gold {
+        background: var(--green-soft);
+      }
 
-    .fleet-icon-circle i {
-      font-size: 38px;
-    }
+      .fleet-icon-circle i {
+        font-size: 38px;
+      }
 
-    .fleet-icon-circle.navy i {
-      color: var(--white);
-    }
+      .fleet-icon-circle.navy i {
+        color: var(--white);
+      }
 
-    .fleet-icon-circle.gold i {
-      color: var(--green);
-    }
+      .fleet-icon-circle.gold i {
+        color: var(--green);
+      }
 
-    /* ============================
+      /* ============================
+       OFFICE / ARTICLE SECTION
+    ============================ */
+      .office-section {
+        background: var(--off-white);
+        overflow: hidden;
+      }
+
+      .office-img-wrap {
+        position: relative;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 24px 60px var(--shadow-soft);
+      }
+
+      .office-img-wrap img {
+        width: 100%;
+        height: 440px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.6s ease;
+      }
+
+      .office-img-wrap:hover img {
+        transform: scale(1.04);
+      }
+
+      /* green ribbon on the image */
+      .office-img-wrap::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 6px;
+        height: 100%;
+        background: linear-gradient(180deg, var(--green-mid), var(--green));
+        z-index: 2;
+        border-radius: 0 24px 24px 0;
+      }
+
+      /* floating experience badge */
+      .office-exp-badge {
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+        background: var(--green);
+        color: white;
+        border-radius: 16px;
+        padding: 16px 22px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(12, 44, 32, 0.35);
+        z-index: 3;
+      }
+
+      .office-exp-badge strong {
+        display: block;
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .office-exp-badge span {
+        font-size: 0.8rem;
+        opacity: 0.85;
+      }
+
+      /* article content */
+      .office-article p {
+        color: var(--text-muted);
+        font-size: 1.05rem;
+        line-height: 2;
+        margin-bottom: 20px;
+      }
+
+      .office-feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 32px 0;
+      }
+
+      .office-feature-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 14px 0;
+        border-bottom: 1px solid var(--border-light);
+        color: var(--text-on-white);
+        font-weight: 600;
+        font-size: 0.97rem;
+      }
+
+      .office-feature-list li:last-child {
+        border-bottom: none;
+      }
+
+      .office-feature-list li .feat-icon {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--green), var(--green-mid));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 16px;
+      }
+
+      /* ============================
+       HERO IMAGE – CREATIVE CARD
+    ============================ */
+      .hero-visual {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-img-frame {
+        position: relative;
+        border-radius: 28px;
+        overflow: hidden;
+        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+      }
+
+      .hero-img-frame img.hero-main-img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 28px;
+        display: block;
+        transition: transform 0.6s ease;
+      }
+
+      .hero-img-frame:hover img.hero-main-img {
+        transform: scale(1.04);
+      }
+
+      /* gradient overlay on image */
+      .hero-img-frame::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          transparent 40%,
+          rgba(12, 44, 32, 0.55) 100%
+        );
+        border-radius: 28px;
+        pointer-events: none;
+      }
+
+      /* floating logo badge */
+      .hero-logo-badge {
+        position: absolute;
+        bottom: -20px;
+        right: 24px;
+        background: white;
+        border-radius: 18px;
+        padding: 10px 18px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 12px 35px rgba(12, 44, 32, 0.22);
+        z-index: 5;
+      }
+
+      .hero-logo-badge img {
+        height: 42px;
+        border-radius: 10px;
+        object-fit: contain;
+      }
+
+      .hero-logo-badge span {
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--green);
+        line-height: 1.3;
+        max-width: 110px;
+      }
+
+      /* floating stats pill */
+      .hero-stat-pill {
+        position: absolute;
+        top: 18px;
+        left: -16px;
+        background: var(--green);
+        color: white;
+        border-radius: 50px;
+        padding: 8px 18px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        box-shadow: 0 8px 24px rgba(12, 44, 32, 0.3);
+        z-index: 5;
+        animation: float-y 3s ease-in-out infinite;
+      }
+
+      @keyframes float-y {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+
+      /* second floating car image (removed-bg) */
+      .hero-car-float {
+        position: absolute;
+        bottom: -30px;
+        left: -30px;
+        width: 160px;
+        filter: drop-shadow(0 12px 24px rgba(12, 44, 32, 0.4));
+        z-index: 4;
+        animation: float-y 4s ease-in-out infinite 1s;
+      }
+
+      /* decorative blob */
+      .hero-blob {
+        position: absolute;
+        top: -40px;
+        left: -40px;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.07) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      /* ============================
+       GALLERY SECTION
+    ============================ */
+      .gallery-section {
+        background: linear-gradient(
+          160deg,
+          var(--green-deep) 0%,
+          var(--green) 100%
+        );
+        padding: 90px 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .gallery-section::before {
+        content: "";
+        position: absolute;
+        top: -80px;
+        left: -80px;
+        width: 350px;
+        height: 350px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.05) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+      }
+
+      .gallery-section .section-label {
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      .gallery-section .section-heading {
+        color: white;
+      }
+
+      .gallery-section .gold-underline {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      /* gallery cards grid */
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 16px;
+      }
+
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        cursor: pointer;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+        transition:
+          transform 0.4s ease,
+          box-shadow 0.4s ease;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-6px) scale(1.015);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      }
+
+      /* large featured image spans 2 rows */
+      .gallery-item.featured {
+        grid-row: span 2;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.6s ease;
+        min-height: 200px;
+      }
+
+      .gallery-item.featured img {
+        min-height: 416px;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.08);
+      }
+
+      /* caption overlay */
+      .gallery-caption {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          transparent 45%,
+          rgba(12, 44, 32, 0.82) 100%
+        );
+        display: flex;
+        align-items: flex-end;
+        padding: 20px;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+
+      .gallery-item:hover .gallery-caption {
+        opacity: 1;
+      }
+
+      .gallery-caption span {
+        color: white;
+        font-weight: 700;
+        font-size: 0.95rem;
+      }
+
+      /* floating removed-bg car in gallery */
+      .gallery-float-car {
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 240px;
+        filter: drop-shadow(0 -8px 24px rgba(255, 255, 255, 0.15));
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      @media (max-width: 767px) {
+        .gallery-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .hero-car-float {
+          display: none;
+        }
+        .hero-stat-pill {
+          left: 8px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ============================
        FAQ SECTION
     ============================ */
-    .faq-section {
-      background: var(--off-white);
-    }
+      .faq-section {
+        background: var(--off-white);
+      }
 
-    .accordion-item {
-      border: none !important;
-      border-radius: 12px !important;
-      margin-bottom: 12px;
-      overflow: hidden;
-      box-shadow: 0 3px 15px var(--shadow-soft);
-    }
+      .accordion-item {
+        border: none !important;
+        border-radius: 12px !important;
+        margin-bottom: 12px;
+        overflow: hidden;
+        box-shadow: 0 3px 15px var(--shadow-soft);
+      }
 
-    .accordion-button {
-      background: var(--white) !important;
-      color: var(--green) !important;
-      font-weight: 700 !important;
-      font-size: 1rem !important;
-      padding: 20px 24px !important;
-      border-left: 4px solid var(--green-mid);
-    }
+      .accordion-button {
+        background: var(--white) !important;
+        color: var(--green) !important;
+        font-weight: 700 !important;
+        font-size: 1rem !important;
+        padding: 20px 24px !important;
+        border-left: 4px solid var(--green-mid);
+      }
 
-    .accordion-button:not(.collapsed) {
-      background: var(--green) !important;
-      color: var(--white) !important;
-      box-shadow: none !important;
-    }
+      .accordion-button:not(.collapsed) {
+        background: var(--green) !important;
+        color: var(--white) !important;
+        box-shadow: none !important;
+      }
 
-    .accordion-button::after {
-      filter: none;
-    }
+      .accordion-button::after {
+        filter: none;
+      }
 
-    .accordion-button:not(.collapsed)::after {
-      filter: invert(1) brightness(2);
-    }
+      .accordion-button:not(.collapsed)::after {
+        filter: invert(1) brightness(2);
+      }
 
-    .accordion-body {
-      background: var(--white) !important;
-      color: var(--text-on-white);
-      line-height: 1.9;
-      padding: 20px 24px !important;
-      border-right: 4px solid var(--green-soft);
-    }
+      .accordion-body {
+        background: var(--white) !important;
+        color: var(--text-on-white);
+        line-height: 1.9;
+        padding: 20px 24px !important;
+        border-right: 4px solid var(--green-soft);
+      }
 
-    /* ============================
+      /* ============================
        FOOTER
     ============================ */
-    .site-footer {
-      background: var(--green-deep);
-      padding: 70px 0 0;
-    }
+      .site-footer {
+        background: var(--green-deep);
+        padding: 70px 0 0;
+      }
 
-    .footer-logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 20px;
-    }
+      .footer-logo-wrap {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
 
-    .footer-logo-wrap img {
-      height: 50px;
-      border-radius: 8px;
-      background: white;
-      padding: 3px;
-    }
+      .footer-logo-wrap img {
+        height: 50px;
+        border-radius: 8px;
+        background: white;
+        padding: 3px;
+      }
 
-    .footer-logo-wrap span {
-      color: var(--white);
-      font-size: 1.1rem;
-      font-weight: 700;
-    }
+      .footer-logo-wrap span {
+        color: var(--white);
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
 
-    .footer-about {
-      color: rgba(255, 255, 255, 0.6);
-      line-height: 1.9;
-      font-size: 0.95rem;
-    }
+      .footer-about {
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.9;
+        font-size: 0.95rem;
+      }
 
-    .footer-title {
-      color: var(--white);
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      padding-bottom: 12px;
-      border-bottom: 2px solid var(--green-mid);
-      display: inline-block;
-    }
+      .footer-title {
+        color: var(--white);
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid var(--green-mid);
+        display: inline-block;
+      }
 
-    .contact-row {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 16px;
-    }
+      .contact-row {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 16px;
+      }
 
-    .contact-icon-wrap {
-      width: 42px;
-      height: 42px;
-      min-width: 42px;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid var(--border-on-green);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--white);
-      font-size: 18px;
-    }
+      .contact-icon-wrap {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid var(--border-on-green);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-size: 18px;
+      }
 
-    .contact-row a {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 0.95rem;
-      transition: color 0.3s;
-    }
+      .contact-row a {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.95rem;
+        transition: color 0.3s;
+      }
 
-    .contact-row a:hover {
-      color: var(--green-soft);
-    }
+      .contact-row a:hover {
+        color: var(--green-soft);
+      }
 
-    .footer-divider {
-      border: none;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      margin: 40px 0 0;
-    }
+      .footer-divider {
+        border: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        margin: 40px 0 0;
+      }
 
-    .footer-bottom {
-      background: rgba(0, 0, 0, 0.2);
-      padding: 18px 0;
-    }
+      .footer-bottom {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 18px 0;
+      }
 
-    .footer-bottom p {
-      color: rgba(255, 255, 255, 0.45);
-      font-size: 0.85rem;
-      margin: 0;
-    }
+      .footer-bottom p {
+        color: rgba(255, 255, 255, 0.45);
+        font-size: 0.85rem;
+        margin: 0;
+      }
 
-    /* ============================
+      /* ============================
        WHATSAPP FLOAT BTN
     ============================ */
-    .whatsapp-float {
-      position: fixed;
-      left: 22px;
-      bottom: 22px;
-      width: 58px;
-      height: 58px;
-      background: #25d366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      color: white;
-      text-decoration: none;
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-      z-index: 9999;
-      transition: all 0.3s ease;
-    }
+      .whatsapp-float {
+        position: fixed;
+        left: 22px;
+        bottom: 22px;
+        width: 58px;
+        height: 58px;
+        background: #25d366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        color: white;
+        text-decoration: none;
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        z-index: 9999;
+        transition: all 0.3s ease;
+      }
 
-    .whatsapp-float:hover {
-      transform: scale(1.12);
-      background: #1ebe5b;
-      color: white;
-    }
+      .whatsapp-float:hover {
+        transform: scale(1.12);
+        background: #1ebe5b;
+        color: white;
+      }
 
-    /* ============================
+      /* ============================
        SCROLL TO TOP
     ============================ */
-    .scroll-top {
-      position: fixed;
-      left: 22px;
-      bottom: 92px;
-      width: 42px;
-      height: 42px;
-      background: var(--green);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 22px;
-      text-decoration: none;
-      opacity: 0;
-      z-index: 9998;
-      transition: all 0.3s;
-      box-shadow: 0 4px 12px var(--shadow-green);
-    }
+      .scroll-top {
+        position: fixed;
+        left: 22px;
+        bottom: 92px;
+        width: 42px;
+        height: 42px;
+        background: var(--green);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 22px;
+        text-decoration: none;
+        opacity: 0;
+        z-index: 9998;
+        transition: all 0.3s;
+        box-shadow: 0 4px 12px var(--shadow-green);
+      }
 
-    .scroll-top.active {
-      opacity: 1;
-    }
+      .scroll-top.active {
+        opacity: 1;
+      }
 
-    .scroll-top:hover {
-      background: var(--green-mid);
-      color: var(--white);
-    }
-  </style>
-</head>
+      .scroll-top:hover {
+        background: var(--green-mid);
+        color: var(--white);
+      }
+    </style>
+  </head>
 
-<body>
+  <body>
+    <!-- ======= HEADER ======= -->
+    <header class="site-header">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo-wrap">
+          <img src="assets/img/logo white.webp" alt="سنارة الخليج للنقليات" />
+          <span>
+            مؤسسة سنارة الخليج
+            <em>للنقليات والخدمات اللوجستية</em>
+          </span>
+        </a>
 
-  <!-- ======= HEADER ======= -->
-  <header class="site-header">
-    <div class="container d-flex align-items-center justify-content-between">
+        <nav class="site-nav">
+          <ul>
+            <li><a href="#hero" class="active">الرئيسية</a></li>
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#fleet">أسطولنا</a></li>
+            <li><a href="#faq">الأسئلة الشائعة</a></li>
+          </ul>
+        </nav>
 
-      <a href="index.html" class="logo-wrap">
-        <img src="assets/img/logo.jpeg" alt="سنارة الخليج للنقليات">
-        <span>
-          مؤسسة سنارة الخليج
-          <em>للنقليات والخدمات اللوجستية</em>
-        </span>
-      </a>
-
-      <nav class="site-nav">
-        <ul>
-          <li><a href="#hero" class="active">الرئيسية</a></li>
-          <li><a href="#about">من نحن</a></li>
-          <li><a href="#services">خدماتنا</a></li>
-          <li><a href="#fleet">أسطولنا</a></li>
-          <li><a href="#faq">الأسئلة الشائعة</a></li>
-        </ul>
-      </nav>
-
-      <a href="#footer" class="btn-contact">تواصل معنا</a>
-      <button class="nav-toggle"><i class="bi bi-list"></i></button>
-
-    </div>
-  </header>
-
-  <!-- ======= HERO SECTION ======= -->
-  <section id="hero" class="hero-section">
-    <div class="container position-relative">
-      <div class="row align-items-center g-5">
-
-        <div class="col-lg-7">
-          <div class="hero-badge">
-            <i class="bi bi-patch-check-fill"></i>
-            مرخصة ومعتمدة في المملكة العربية السعودية
-          </div>
-
-          <h1 class="hero-title">
-            مؤسسة <span>سنارة الخليج</span><br>للنقليات
-          </h1>
-
-          <p class="hero-text">
-            مؤسسة وطنية متخصصة في خدمات النقل البري والخدمات اللوجستية
-            داخل المملكة العربية السعودية. نعمل وفق أعلى معايير السلامة
-            والجودة لتلبية احتياجات عملائنا من الأفراد والجهات الحكومية
-            والشركات الخاصة.
-          </p>
-
-          <div class="hero-btns">
-            <a href="#services" class="btn-primary-gold">اكتشف خدماتنا</a>
-            <a href="#fleet" class="btn-outline-white">أسطولنا</a>
-          </div>
-
-          <div class="hero-stats">
-            <div class="stat-item">
-              <div class="stat-number">+5000</div>
-              <div class="stat-label">رحلة منجزة</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">+10</div>
-              <div class="stat-label">سنوات خبرة</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">24/7</div>
-              <div class="stat-label">دعم مستمر</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-5">
-          <div class="hero-logo-card">
-            <img src="assets/img/logo.jpeg" alt="مؤسسة سنارة الخليج للنقليات">
-          </div>
-        </div>
-
+        <a href="#footer" class="btn-contact">تواصل معنا</a>
+        <button class="nav-toggle"><i class="bi bi-list"></i></button>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- ======= ABOUT SECTION ======= -->
-  <section id="about" class="about-section">
-    <div class="container">
-      <div class="text-center mb-5">
-        <span class="section-label">تعرف علينا</span>
-        <h2 class="section-heading">من نحن</h2>
-        <div class="gold-underline"></div>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-lg-6">
-          <div class="about-card">
-            <div class="about-icon">
-              <i class="bi bi-eye-fill"></i>
+    <!-- ======= HERO SECTION ======= -->
+    <section id="hero" class="hero-section">
+      <div class="container position-relative">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <div class="hero-badge">
+              <i class="bi bi-patch-check-fill"></i>
+              مرخصة ومعتمدة في المملكة العربية السعودية
             </div>
-            <h4>رؤيتنا</h4>
-            <p style="color: var(--text-muted);">
-              أن نكون الخيار الأول في قطاع النقل البري والخدمات اللوجستية
-              من حيث الموثوقية والسرعة والالتزام، ونسعى لتحقيق التحول الرقمي
-              في قطاع النقل بالمملكة العربية السعودية.
+
+            <h1 class="hero-title">
+              مؤسسة <span>سنارة الخليج</span><br />للنقليات
+            </h1>
+
+            <p class="hero-text">
+              مؤسسة وطنية متخصصة في خدمات النقل البري والخدمات اللوجستية داخل
+              المملكة العربية السعودية. نعمل وفق أعلى معايير السلامة والجودة
+              لتلبية احتياجات عملائنا من الأفراد والجهات الحكومية والشركات
+              الخاصة.
             </p>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="about-card">
-            <div class="about-icon">
-              <i class="bi bi-send-fill"></i>
-            </div>
-            <h4>رسالتنا</h4>
-            <p style="color: var(--text-muted);">
-              تقديم حلول نقل متكاملة وآمنة وبأسعار تنافسية، مع الالتزام
-              بالمواعيد وبناء شراكات طويلة الأمد. نضمن وصول بضاعتك
-              بأمان وفي الوقت المحدد.
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="about-card">
-            <div class="about-icon"><i class="bi bi-shield-check"></i></div>
-            <h5>السلامة أولاً</h5>
-            <p style="color: var(--text-muted); margin: 0;">نطبق أعلى معايير السلامة المهنية في جميع رحلاتنا.</p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="about-card">
-            <div class="about-icon"><i class="bi bi-clock-history"></i></div>
-            <h5>الالتزام بالمواعيد</h5>
-            <p style="color: var(--text-muted); margin: 0;">نلتزم بالمواعيد المحددة ونعتبرها جوهر خدمتنا.</p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="about-card">
-            <div class="about-icon"><i class="bi bi-hand-thumbs-up"></i></div>
-            <h5>رضا العملاء</h5>
-            <p style="color: var(--text-muted); margin: 0;">رضا عملائنا هو معيار نجاحنا الأساسي دائماً.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ======= SERVICES SECTION ======= -->
-  <section id="services" class="services-section">
-    <div class="container">
-      <div class="text-center mb-5">
-        <span class="section-label">ما نقدمه</span>
-        <h2 class="section-heading">خدماتنا</h2>
-        <div class="gold-underline"></div>
-      </div>
+            <div class="hero-btns">
+              <a href="#services" class="btn-primary-gold">اكتشف خدماتنا</a>
+              <a href="#fleet" class="btn-outline-white">أسطولنا</a>
+            </div>
 
-      <div class="row g-4 justify-content-center">
-        <div class="col-lg-4 col-md-6">
-          <div class="service-card">
-            <div class="service-icon-wrap">
-              <i class="bi bi-box-seam"></i>
-            </div>
-            <div class="service-body">
-              <h4>النقل البري الجاف</h4>
-              <p>نقل البضائع الجافة بأمان وسرعة داخل وخارج المدن بأعلى مستويات الجودة.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="service-card">
-            <div class="service-icon-wrap">
-              <i class="bi bi-snow"></i>
-            </div>
-            <div class="service-body">
-              <h4>النقل المبرد والمجمد</h4>
-              <p>أسطول مجهز بأحدث تقنيات التبريد لضمان سلامة الأغذية والمنتجات الحساسة.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="service-card">
-            <div class="service-icon-wrap">
-              <i class="bi bi-diagram-3"></i>
-            </div>
-            <div class="service-body">
-              <h4>الخدمات اللوجستية</h4>
-              <p>خدمات لوجستية مخصصة حسب الطلب لتسهيل سلاسل الإمداد وتلبية تطلعات شركائنا.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======= FLEET SECTION ======= -->
-  <section id="fleet" class="fleet-section">
-    <div class="container">
-      <div class="text-center mb-5">
-        <span class="section-label">عتادنا</span>
-        <h2 class="section-heading">أسطولنا</h2>
-        <div class="gold-underline"></div>
-        <p style="color: var(--text-muted); max-width: 620px; margin: 0 auto;">
-          نمتلك أسطولاً حديثاً ومتنوعاً من الشاحنات والمقطورات المجهزة بأحدث تقنيات التتبع والسلامة.
-        </p>
-      </div>
-
-      <div class="row g-4 justify-content-center">
-        <div class="col-xl-4 col-md-6">
-          <div class="fleet-card">
-            <div class="fleet-icon-circle navy d-flex align-items-center justify-content-center mx-auto mb-4"
-              style="width:90px;height:90px;border-radius:50%;">
-              <i class="bi bi-truck" style="font-size:38px; color: var(--white);"></i>
-            </div>
-            <h4 style="text-align:center;">شاحنات دينا</h4>
-            <p style="color: var(--text-muted); text-align:center;">مثالية للحمولات المتوسطة والتوزيع السريع داخل المدن
-              بمرونة وكفاءة عالية.</p>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6">
-          <div class="fleet-card">
-            <div class="d-flex align-items-center justify-content-center mx-auto mb-4"
-              style="width:90px;height:90px;border-radius:50%;background:var(--green-soft);">
-              <i class="bi bi-truck-flatbed" style="font-size:38px; color: var(--green);"></i>
-            </div>
-            <h4 style="text-align:center;">شاحنات سطحة</h4>
-            <p style="color: var(--text-muted); text-align:center;">مخصصة لنقل المعدات الثقيلة والسيارات وتوفير الدعم
-              اللوجستي للحمولات الخاصة.</p>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6">
-          <div class="fleet-card">
-            <div class="d-flex align-items-center justify-content-center mx-auto mb-4"
-              style="width:90px;height:90px;border-radius:50%;background:var(--green);">
-              <i class="bi bi-truck-front-fill" style="font-size:38px; color: var(--white);"></i>
-            </div>
-            <h4 style="text-align:center;">تريلات ومقطورات</h4>
-            <p style="color: var(--text-muted); text-align:center;">مصممة لنقل البضائع ذات الحمولات الكبيرة والمسافات
-              الطويلة بين مدن المملكة.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======= FAQ SECTION ======= -->
-  <section id="faq" class="faq-section">
-    <div class="container">
-      <div class="text-center mb-5">
-        <span class="section-label">استفساراتكم</span>
-        <h2 class="section-heading">الأسئلة الشائعة للناقلين</h2>
-        <div class="gold-underline"></div>
-        <p style="color: var(--text-muted); max-width: 620px; margin: 0 auto;">
-          نجمع هنا أبرز الاستفسارات التي تهم شركائنا من الناقلين لضمان تجربة عمل سلسة وواضحة.
-        </p>
-      </div>
-
-      <div class="row justify-content-center">
-        <div class="col-lg-9">
-          <div class="accordion" id="faqAccordion">
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="h1">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c1"
-                  aria-expanded="false">
-                  ما هو نطاق التغطية الجغرافية لخدماتكم؟
-                </button>
-              </h2>
-              <div id="c1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  نغطي جميع مدن ومناطق المملكة العربية السعودية، بما فيها جدة، الرياض، الدمام، المدينة المنورة، القصيم،
-                  وأبها،
-                  مع إمكانية جدولة رحلات منتظمة أو حسب الطلب.
-                </div>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <div class="stat-number">+5000</div>
+                <div class="stat-label">رحلة منجزة</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">+10</div>
+                <div class="stat-label">سنوات خبرة</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">دعم مستمر</div>
               </div>
             </div>
+          </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="h2">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c2">
-                  ما أنواع الشاحنات التي توفرونها؟
-                </button>
-              </h2>
-              <div id="c2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  نوفر جميع أنواع الشاحنات حسب طبيعة الشحنة: مبردة، جافة (ستارة / صندوق)، دينا، شاحنات صغيرة ومتوسطة،
-                  وتريلات كبيرة. يتم اختيار المركبة المناسبة بناءً على نوع البضاعة وحجمها.
-                </div>
+          <div class="col-lg-5">
+            <div class="hero-visual">
+              <!-- Main truck image frame -->
+              <div class="hero-img-frame">
+                <img src="assets/img/cover city.webp" class="hero-main-img" />
               </div>
-            </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="h3">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c3">
-                  هل يوجد تأمين على الشحنات؟
-                </button>
-              </h2>
-              <div id="c3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  نعم، نوفر تأميناً على الشحنات حسب طلب العميل ونوع البضاعة، لضمان حماية البضائع أثناء النقل. يُفعَّل
-                  التأمين
-                  عند التعاقد مع توضيح كامل لتفاصيل التغطية.
-                </div>
-              </div>
+              <!-- decorative blob -->
+              <div class="hero-blob"></div>
             </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="h4">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c4">
-                  كيف يمكنني طلب شاحنة أو متابعة الشحنة؟
-                </button>
-              </h2>
-              <div id="c4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  يمكن طلب الخدمة أو متابعة الشحنة عبر الاتصال المباشر، الموقع الإلكتروني، أو البريد الإلكتروني.
-                  كما نوفر نظام تتبع يُمكّن العميل من معرفة حالة الشحنة حتى وصولها.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="h5">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c5">
-                  ما أنواع البضائع التي يمكنكم نقلها؟
-                </button>
-              </h2>
-              <div id="c5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  نتعامل مع مختلف أنواع البضائع: المواد الغذائية (مبردة وجافة)، المنتجات التجارية، المعدات، والبضائع
-                  الصناعية.
-                  يتم اختيار وسيلة النقل المناسبة حسب طبيعة الحمولة ومتطلبات التخزين.
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ======= FOOTER ======= -->
-  <footer id="footer" class="site-footer">
-    <div class="container" id="contact-footer">
-      <div class="row g-5 justify-content-between">
+    <!-- ======= ABOUT SECTION ======= -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">تعرف علينا</span>
+          <h2 class="section-heading">من نحن</h2>
+          <div class="gold-underline"></div>
+        </div>
 
-        <div class="col-lg-5">
-          <div class="footer-logo-wrap">
-            <img src="assets/img/logo.jpeg" alt="سنارة الخليج للنقليات">
-            <span>مؤسسة سنارة الخليج للنقليات</span>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="about-card">
+              <div class="about-icon">
+                <i class="bi bi-eye-fill"></i>
+              </div>
+              <h4>رؤيتنا</h4>
+              <p style="color: var(--text-muted)">
+                أن نكون الخيار الأول في قطاع النقل البري والخدمات اللوجستية من
+                حيث الموثوقية والسرعة والالتزام، ونسعى لتحقيق التحول الرقمي في
+                قطاع النقل بالمملكة العربية السعودية.
+              </p>
+            </div>
           </div>
-          <p class="footer-about">
-            الخيار الأول في قطاع النقل البري والخدمات اللوجستية في المملكة.
-            نسعد بخدمتكم وتلبية كافة احتياجاتكم من حلول النقل بأمان وسرعة وموثوقية.
+          <div class="col-lg-6">
+            <div class="about-card">
+              <div class="about-icon">
+                <i class="bi bi-send-fill"></i>
+              </div>
+              <h4>رسالتنا</h4>
+              <p style="color: var(--text-muted)">
+                تقديم حلول نقل متكاملة وآمنة وبأسعار تنافسية، مع الالتزام
+                بالمواعيد وبناء شراكات طويلة الأمد. نضمن وصول بضاعتك بأمان وفي
+                الوقت المحدد.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="about-card">
+              <div class="about-icon"><i class="bi bi-shield-check"></i></div>
+              <h5>السلامة أولاً</h5>
+              <p style="color: var(--text-muted); margin: 0">
+                نطبق أعلى معايير السلامة المهنية في جميع رحلاتنا.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="about-card">
+              <div class="about-icon"><i class="bi bi-clock-history"></i></div>
+              <h5>الالتزام بالمواعيد</h5>
+              <p style="color: var(--text-muted); margin: 0">
+                نلتزم بالمواعيد المحددة ونعتبرها جوهر خدمتنا.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="about-card">
+              <div class="about-icon"><i class="bi bi-hand-thumbs-up"></i></div>
+              <h5>رضا العملاء</h5>
+              <p style="color: var(--text-muted); margin: 0">
+                رضا عملائنا هو معيار نجاحنا الأساسي دائماً.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= SERVICES SECTION ======= -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">ما نقدمه</span>
+          <h2 class="section-heading">خدماتنا</h2>
+          <div class="gold-underline"></div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon-wrap">
+                <i class="bi bi-box-seam"></i>
+              </div>
+              <div class="service-body">
+                <h4>النقل البري الجاف</h4>
+                <p>
+                  نقل البضائع الجافة بأمان وسرعة داخل وخارج المدن بأعلى مستويات
+                  الجودة.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon-wrap">
+                <i class="bi bi-snow"></i>
+              </div>
+              <div class="service-body">
+                <h4>النقل المبرد والمجمد</h4>
+                <p>
+                  أسطول مجهز بأحدث تقنيات التبريد لضمان سلامة الأغذية والمنتجات
+                  الحساسة.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon-wrap">
+                <i class="bi bi-diagram-3"></i>
+              </div>
+              <div class="service-body">
+                <h4>الخدمات اللوجستية</h4>
+                <p>
+                  خدمات لوجستية مخصصة حسب الطلب لتسهيل سلاسل الإمداد وتلبية
+                  تطلعات شركائنا.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= OFFICE / ARTICLE SECTION ======= -->
+    <section class="office-section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <!-- Image column -->
+          <div class="col-lg-5">
+            <div class="office-img-wrap">
+              <img
+                src="assets/img/offec.webp"
+                alt="مقر مؤسسة سنارة الخليج للنقليات"
+              />
+              <!-- Floating badge -->
+              <div class="office-exp-badge">
+                <strong>+10</strong>
+                <span>سنوات خبرة</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article column -->
+          <div class="col-lg-7">
+            <div class="office-article">
+              <span class="section-label">تعرف علينا</span>
+              <h2 class="section-heading mt-2">مؤسسة سنارة الخليج</h2>
+              <div class="gold-underline start"></div>
+
+              <p>
+                متخصصون في نقل البضائع داخل مدن المملكة العربية السعودية ودول
+                الخليج باحترافية عالية. نقدم حلول شحن سريعة وآمنة لأصحاب المصانع
+                والمتاجر والمستودعات، مع التزام تام بالمواعيد ودقة في التنفيذ.
+              </p>
+              <p>
+                نوفّر أسطولًا مجهزًا وفريق عمل محترف لضمان وصول بضائعكم بأعلى
+                معايير السلامة والموثوقية، لأن نجاح أعمالكم يبدأ من خدمة نقل
+                تعتمدون عليها.
+              </p>
+
+              <ul class="office-feature-list">
+                <li>
+                  <div class="feat-icon"><i class="bi bi-building"></i></div>
+                  <div>
+                    خدماتنا موجهة لأصحاب المصانع والمتاجر والمستودعات على مستوى
+                    المملكة
+                  </div>
+                </li>
+                <li>
+                  <div class="feat-icon">
+                    <i class="bi bi-truck-front-fill"></i>
+                  </div>
+                  <div>
+                    أسطول حديث ومجهز بأعلى معايير السلامة والتتبع الفوري
+                  </div>
+                </li>
+                <li>
+                  <div class="feat-icon"><i class="bi bi-globe2"></i></div>
+                  <div>
+                    تغطية شاملة داخل المملكة العربية السعودية ودول الخليج العربي
+                  </div>
+                </li>
+                <li>
+                  <div class="feat-icon">
+                    <i class="bi bi-clock-history"></i>
+                  </div>
+                  <div>
+                    التزام تام بالمواعيد وضمان وصول البضائع في الوقت المحدد
+                  </div>
+                </li>
+              </ul>
+
+              <a
+                href="#footer"
+                class="btn-primary-gold"
+                style="
+                  display: inline-block;
+                  padding: 13px 32px;
+                  border-radius: 10px;
+                  font-size: 0.97rem;
+                "
+              >
+                <i class="bi bi-telephone-fill me-2"></i>تواصل معنا الآن
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= FLEET SECTION ======= -->
+    <section id="fleet" class="fleet-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">عتادنا</span>
+          <h2 class="section-heading">أسطولنا</h2>
+          <div class="gold-underline"></div>
+          <p style="color: var(--text-muted); max-width: 620px; margin: 0 auto">
+            نمتلك أسطولاً حديثاً ومتنوعاً من الشاحنات والمقطورات المجهزة بأحدث
+            تقنيات التتبع والسلامة.
           </p>
         </div>
 
-        <div class="col-lg-4">
-          <div class="footer-title">أرقام التواصل</div>
-
-          <div class="contact-row">
-            <div class="contact-icon-wrap">
-              <i class="bi bi-telephone-fill"></i>
+        <div class="row g-4 justify-content-center">
+          <div class="col-xl-4 col-md-6">
+            <div class="fleet-card">
+              <div
+                class="fleet-icon-circle navy d-flex align-items-center justify-content-center mx-auto mb-4"
+                style="width: 90px; height: 90px; border-radius: 50%"
+              >
+                <i
+                  class="bi bi-truck"
+                  style="font-size: 38px; color: var(--white)"
+                ></i>
+              </div>
+              <h4 style="text-align: center">شاحنات دينا</h4>
+              <p style="color: var(--text-muted); text-align: center">
+                مثالية للحمولات المتوسطة والتوزيع السريع داخل المدن بمرونة
+                وكفاءة عالية.
+              </p>
             </div>
-            <a href="tel:0508750008">0508750008</a>
           </div>
-
-          <div class="contact-row">
-            <div class="contact-icon-wrap">
-              <i class="bi bi-telephone-fill"></i>
+          <div class="col-xl-4 col-md-6">
+            <div class="fleet-card">
+              <div
+                class="d-flex align-items-center justify-content-center mx-auto mb-4"
+                style="
+                  width: 90px;
+                  height: 90px;
+                  border-radius: 50%;
+                  background: var(--green-soft);
+                "
+              >
+                <i
+                  class="bi bi-truck-flatbed"
+                  style="font-size: 38px; color: var(--green)"
+                ></i>
+              </div>
+              <h4 style="text-align: center">شاحنات سطحة</h4>
+              <p style="color: var(--text-muted); text-align: center">
+                مخصصة لنقل المعدات الثقيلة والسيارات وتوفير الدعم اللوجستي
+                للحمولات الخاصة.
+              </p>
             </div>
-            <a href="tel:0502274884">0502274884</a>
           </div>
-
-          <div class="contact-row">
-            <div class="contact-icon-wrap">
-              <i class="bi bi-envelope-fill"></i>
+          <div class="col-xl-4 col-md-6">
+            <div class="fleet-card">
+              <div
+                class="d-flex align-items-center justify-content-center mx-auto mb-4"
+                style="
+                  width: 90px;
+                  height: 90px;
+                  border-radius: 50%;
+                  background: var(--green);
+                "
+              >
+                <i
+                  class="bi bi-truck-front-fill"
+                  style="font-size: 38px; color: var(--white)"
+                ></i>
+              </div>
+              <h4 style="text-align: center">تريلات ومقطورات</h4>
+              <p style="color: var(--text-muted); text-align: center">
+                مصممة لنقل البضائع ذات الحمولات الكبيرة والمسافات الطويلة بين
+                مدن المملكة.
+              </p>
             </div>
-            <a href="mailto:sannaraalkhaleej@gmail.com">sannaraalkhaleej@gmail.com</a>
-          </div>
-
-          <div class="contact-row mt-3">
-            <div class="contact-icon-wrap">
-              <i class="bi bi-whatsapp"></i>
-            </div>
-            <a href="https://wa.me/966502274884" target="_blank">تواصل عبر واتساب</a>
           </div>
         </div>
-
       </div>
-    </div>
+    </section>
 
-    <hr class="footer-divider">
-    <div class="footer-bottom">
-      <div class="container text-center">
-        <p>© جميع الحقوق محفوظة لمؤسسة سنارة الخليج للنقليات 2025</p>
+    <!-- ======= FAQ SECTION ======= -->
+    <section id="faq" class="faq-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">استفساراتكم</span>
+          <h2 class="section-heading">الأسئلة الشائعة للناقلين</h2>
+          <div class="gold-underline"></div>
+          <p style="color: var(--text-muted); max-width: 620px; margin: 0 auto">
+            نجمع هنا أبرز الاستفسارات التي تهم شركائنا من الناقلين لضمان تجربة
+            عمل سلسة وواضحة.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="h1">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#c1"
+                    aria-expanded="false"
+                  >
+                    ما هو نطاق التغطية الجغرافية لخدماتكم؟
+                  </button>
+                </h2>
+                <div
+                  id="c1"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    نغطي جميع مدن ومناطق المملكة العربية السعودية، بما فيها جدة،
+                    الرياض، الدمام، المدينة المنورة، القصيم، وأبها، مع إمكانية
+                    جدولة رحلات منتظمة أو حسب الطلب.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="h2">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#c2"
+                  >
+                    ما أنواع الشاحنات التي توفرونها؟
+                  </button>
+                </h2>
+                <div
+                  id="c2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    نوفر جميع أنواع الشاحنات حسب طبيعة الشحنة: مبردة، جافة
+                    (ستارة / صندوق)، دينا، شاحنات صغيرة ومتوسطة، وتريلات كبيرة.
+                    يتم اختيار المركبة المناسبة بناءً على نوع البضاعة وحجمها.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="h3">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#c3"
+                  >
+                    هل يوجد تأمين على الشحنات؟
+                  </button>
+                </h2>
+                <div
+                  id="c3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    نعم، نوفر تأميناً على الشحنات حسب طلب العميل ونوع البضاعة،
+                    لضمان حماية البضائع أثناء النقل. يُفعَّل التأمين عند التعاقد
+                    مع توضيح كامل لتفاصيل التغطية.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="h4">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#c4"
+                  >
+                    كيف يمكنني طلب شاحنة أو متابعة الشحنة؟
+                  </button>
+                </h2>
+                <div
+                  id="c4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    يمكن طلب الخدمة أو متابعة الشحنة عبر الاتصال المباشر، الموقع
+                    الإلكتروني، أو البريد الإلكتروني. كما نوفر نظام تتبع يُمكّن
+                    العميل من معرفة حالة الشحنة حتى وصولها.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="h5">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#c5"
+                  >
+                    ما أنواع البضائع التي يمكنكم نقلها؟
+                  </button>
+                </h2>
+                <div
+                  id="c5"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    نتعامل مع مختلف أنواع البضائع: المواد الغذائية (مبردة
+                    وجافة)، المنتجات التجارية، المعدات، والبضائع الصناعية. يتم
+                    اختيار وسيلة النقل المناسبة حسب طبيعة الحمولة ومتطلبات
+                    التخزين.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <!-- WhatsApp Float -->
-  <a href="https://wa.me/966502274884" class="whatsapp-float" target="_blank">
-    <i class="bi bi-whatsapp"></i>
-  </a>
+    <!-- ======= FOOTER ======= -->
+    <footer id="footer" class="site-footer">
+      <div class="container" id="contact-footer">
+        <div class="row g-5 justify-content-between">
+          <div class="col-lg-5">
+            <div class="footer-logo-wrap">
+              <img
+                src="assets/img/logo white.webp"
+                alt="سنارة الخليج للنقليات"
+              />
+              <span>مؤسسة سنارة الخليج للنقليات</span>
+            </div>
+            <p class="footer-about">
+              الخيار الأول في قطاع النقل البري والخدمات اللوجستية في المملكة.
+              نسعد بخدمتكم وتلبية كافة احتياجاتكم من حلول النقل بأمان وسرعة
+              وموثوقية.
+            </p>
+          </div>
 
-  <!-- Scroll Top -->
-  <a href="#hero" id="scroll-top" class="scroll-top">
-    <i class="bi bi-arrow-up-short"></i>
-  </a>
+          <div class="col-lg-4">
+            <div class="footer-title">أرقام التواصل</div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    crossorigin="anonymous"></script>
+            <div class="contact-row">
+              <div class="contact-icon-wrap">
+                <i class="bi bi-telephone-fill"></i>
+              </div>
+              <a href="tel:0508750008">0508750008</a>
+            </div>
 
-  <script>
-    // Smooth active nav
-    const navLinks = document.querySelectorAll('.site-nav a');
-    const sections = document.querySelectorAll('section[id]');
+            <div class="contact-row">
+              <div class="contact-icon-wrap">
+                <i class="bi bi-telephone-fill"></i>
+              </div>
+              <a href="tel:0502274884">0502274884</a>
+            </div>
 
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(s => {
-        if (window.scrollY >= s.offsetTop - 100) current = s.id;
+            <div class="contact-row">
+              <div class="contact-icon-wrap">
+                <i class="bi bi-envelope-fill"></i>
+              </div>
+              <a href="mailto:sannaraalkhaleej@gmail.com"
+                >sannaraalkhaleej@gmail.com</a
+              >
+            </div>
+
+            <div class="contact-row mt-3">
+              <div class="contact-icon-wrap">
+                <i class="bi bi-whatsapp"></i>
+              </div>
+              <a href="https://wa.me/966502274884" target="_blank"
+                >تواصل عبر واتساب</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="footer-divider" />
+      <div class="footer-bottom">
+        <div class="container text-center">
+          <p>© جميع الحقوق محفوظة لمؤسسة سنارة الخليج للنقليات 2025</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/966502274884" class="whatsapp-float" target="_blank">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Scroll Top -->
+    <a href="#hero" id="scroll-top" class="scroll-top">
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Smooth active nav
+      const navLinks = document.querySelectorAll(".site-nav a");
+      const sections = document.querySelectorAll("section[id]");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((s) => {
+          if (window.scrollY >= s.offsetTop - 100) current = s.id;
+        });
+        navLinks.forEach((a) => {
+          a.classList.toggle(
+            "active",
+            a.getAttribute("href") === "#" + current,
+          );
+        });
+
+        // scroll top visibility
+        const st = document.getElementById("scroll-top");
+        if (st) st.classList.toggle("active", window.scrollY > 400);
       });
-      navLinks.forEach(a => {
-        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-      });
-
-      // scroll top visibility
-      const st = document.getElementById('scroll-top');
-      if (st) st.classList.toggle('active', window.scrollY > 400);
-    });
-  </script>
-
-</body>
-
+    </script>
+  </body>
 </html>
