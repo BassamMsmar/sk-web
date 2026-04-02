@@ -255,7 +255,37 @@
       }
 
       @media (max-width: 991px) {
-        .site-nav,
+        .site-nav {
+          position: absolute;
+          top: 72px;
+          right: 0;
+          left: 0;
+          background: var(--green);
+          display: none;
+          flex-direction: column;
+          padding: 20px;
+          border-top: 1px solid var(--border-on-green);
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+          z-index: 999;
+        }
+
+        .site-nav.active {
+          display: flex !important;
+        }
+
+        .site-nav ul {
+          flex-direction: column;
+          gap: 10px;
+          width: 100%;
+        }
+
+        .site-nav a {
+          display: block;
+          padding: 12px 20px;
+          width: 100%;
+          text-align: center;
+        }
+
         .btn-contact {
           display: none !important;
         }
@@ -2008,6 +2038,36 @@
     ></script>
 
     <script>
+      /* ── Mobile Menu Toggle ── */
+      const navToggle = document.querySelector(".nav-toggle");
+      const siteNav = document.querySelector(".site-nav");
+      const navToggleIcon = navToggle.querySelector("i");
+
+      if (navToggle) {
+        navToggle.addEventListener("click", () => {
+          siteNav.classList.toggle("active");
+          const isActive = siteNav.classList.contains("active");
+
+          // Toggle Icon
+          if (navToggleIcon) {
+            navToggleIcon.classList.toggle("bi-list", !isActive);
+            navToggleIcon.classList.toggle("bi-x", isActive);
+          }
+        });
+      }
+
+      // Close menu when clicking a link
+      const mobileLinks = document.querySelectorAll(".site-nav a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          siteNav.classList.remove("active");
+          if (navToggleIcon) {
+            navToggleIcon.classList.add("bi-list");
+            navToggleIcon.classList.remove("bi-x");
+          }
+        });
+      });
+
       /* ── Active Nav ── */
       const navLinks = document.querySelectorAll(".site-nav a");
       const sections = document.querySelectorAll("section[id]");
