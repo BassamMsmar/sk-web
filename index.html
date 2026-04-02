@@ -401,6 +401,8 @@
         font-size: 2rem;
         font-weight: 800;
         color: var(--green-soft);
+        direction: ltr;
+        display: inline-block;
       }
 
       .stat-label {
@@ -1242,6 +1244,109 @@
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
         color: var(--green);
       }
+
+      /* ── Footer Badges (Registration & VAT) ── */
+      .footer-badges {
+        display: flex;
+        justify-content: center;
+        gap: clamp(10px, 3vw, 40px);
+        margin-top: 40px;
+        padding: 25px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .badge-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 16px;
+        background: #ffffff;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.35s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      }
+      .badge-item:hover {
+        background: #f8faff;
+        border-color: var(--gold-mid, #c5a059);
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      }
+      .badge-icon {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .badge-content {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+      }
+      .badge-label {
+        font-size: 0.75rem;
+        color: #718096;
+        margin-bottom: 1px;
+        font-weight: 500;
+        opacity: 0.9;
+      }
+      .badge-value {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #2d3748;
+        letter-spacing: 0.5px;
+        font-family: inherit;
+        white-space: nowrap;
+      }
+      .vat-img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        border-radius: 6px;
+      }
+      .flag-img {
+        width: 42px;
+        height: 28px;
+        object-fit: contain;
+        border-radius: 4px;
+      }
+      .vat-img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        border-radius: 6px;
+      }
+      .flag-img {
+        width: 42px;
+        height: 28px;
+        object-fit: contain;
+        border-radius: 4px;
+      }
+
+      @media (max-width: 576px) {
+        .footer-badges {
+          gap: 10px;
+          margin-top: 25px;
+          padding: 15px 0;
+        }
+        .badge-item {
+          padding: 8px 12px;
+          gap: 8px;
+        }
+        .badge-label {
+          font-size: 0.65rem;
+        }
+        .badge-value {
+          font-size: 0.8rem;
+        }
+        .vat-img {
+          width: 32px;
+          height: 32px;
+        }
+        .flag-img {
+          width: 34px;
+          height: 22px;
+        }
+      }
     </style>
   </head>
 
@@ -1277,7 +1382,7 @@
       <div class="container position-relative">
         <div class="row align-items-center g-5">
           <div class="col-lg-7">
-            <div class="hero-badge">
+            <div class="hero-badge mt-1">
               <i class="bi bi-patch-check-fill"></i>
               مرخصة ومعتمدة في المملكة العربية السعودية
             </div>
@@ -1308,7 +1413,7 @@
                 <div class="stat-label">سنوات خبرة</div>
               </div>
               <div class="stat-item">
-                <div class="stat-number">24/7</div>
+                <div class="stat-number" dir="ltr">24/7</div>
                 <div class="stat-label">دعم مستمر</div>
               </div>
             </div>
@@ -1849,6 +1954,35 @@
         </div>
       </div>
 
+      <!-- ======= REGISTRATION BADGES ======= -->
+      <div class="container">
+        <div class="footer-badges">
+          <!-- Commercial Register -->
+          <div class="badge-item fade-in-up">
+            <div class="badge-icon">
+              <!-- Commercial Register Image -->
+              <img src="assets/img/السجل التجاري.png" alt="السجل التجاري" class="flag-img">
+            </div>
+            <div class="badge-content">
+              <span class="badge-label">السجل التجاري</span>
+              <span class="badge-value">7014572015</span>
+            </div>
+          </div>
+
+          <!-- VAT Registration -->
+          <div class="badge-item fade-in-up">
+            <div class="badge-icon">
+              <!-- VAT Logo Image -->
+              <img src="assets/img/VAT.jpg" alt="الرقم الضريبي" class="vat-img">
+            </div>
+            <div class="badge-content">
+              <span class="badge-label">الرقم الضريبي</span>
+              <span class="badge-value">302284074600004</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <hr class="footer-divider" />
       <div class="footer-bottom">
         <div class="container text-center">
@@ -1916,6 +2050,7 @@
           entries.forEach((e) => {
             if (!e.isIntersecting) return;
             const el = e.target;
+            if (el.textContent.includes("/")) return;
             const raw = el.textContent.replace(/[^0-9]/g, "");
             const target = parseInt(raw, 10);
             if (!target) return;
